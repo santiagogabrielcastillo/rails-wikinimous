@@ -4,12 +4,16 @@
     <title>RailsWikinimous</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="nav-bar d-flex justify-content-between align-items-center border-bottom bg-light p-1">
+  <p class="nav-link name"><%= link_to 'Wikinimous', articles_path %></p>
+  <p class="nav-link"><%= link_to 'New article', new_article_path %></p>
+  </div>
     <%= yield %>
   </body>
 </html>
